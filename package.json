@@ -1,0 +1,29 @@
+{
+  "name": "lab4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server",
+    "start": "node server",
+    "db:makemigrations": "node ./node_modules/sequelize-auto-migrations/bin/makemigration.js --name initdb",
+    "db:runmigrations": "sequelize db:migrate",
+    "db:init": "sequelize db:migrate && sequelize db:seed:all"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.2.5",
+    "node-fetch": "^2.6.1",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6",
+    "sequelize-auto-migrations": "git+https://github.com/ericbenedetto16/sequelize-auto-migrations.git"
+  }
+}

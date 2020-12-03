@@ -1,0 +1,54 @@
+{
+    "tables": {
+        "weather": {
+            "tableName": "weather",
+            "schema": {
+                "id": {
+                    "primaryKey": true,
+                    "autoIncrement": true,
+                    "allowNull": false,
+                    "field": "id",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "city": {
+                    "allowNull": false,
+                    "unique": "city_state",
+                    "field": "city",
+                    "seqType": "Sequelize.TEXT"
+                },
+                "zip": {
+                    "allowNull": false,
+                    "field": "zip",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "temperature_f": {
+                    "allowNull": false,
+                    "field": "temperature_f",
+                    "seqType": "Sequelize.FLOAT"
+                },
+                "pressure": {
+                    "allowNull": false,
+                    "field": "pressure",
+                    "seqType": "Sequelize.FLOAT"
+                },
+                "humidity": {
+                    "allowNull": false,
+                    "field": "humidity",
+                    "seqType": "Sequelize.FLOAT"
+                },
+                "created_at": {
+                    "allowNull": false,
+                    "field": "created_at",
+                    "seqType": "Sequelize.DATE"
+                },
+                "updated_at": {
+                    "allowNull": false,
+                    "field": "updated_at",
+                    "seqType": "Sequelize.DATE"
+                }
+            },
+            "indexes": []
+        }
+    },
+    "revision": 1
+}
